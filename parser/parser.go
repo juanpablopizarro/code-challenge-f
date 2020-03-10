@@ -139,9 +139,6 @@ func readType(input []byte) (rune, error) {
 	} else if v == byte(Number) {
 		return Number, nil
 	} else {
-		fmt.Printf("type=%c\n", v)
-		fmt.Printf("v == byte(Alphanumeric): %v\n", v == byte(Alphanumeric))
-		fmt.Printf("v == byte(Number): %v\n", v == byte(Number))
 		return 0, errors.New("invalid type")
 	}
 }
